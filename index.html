@@ -133,34 +133,7 @@
     </style>
 </head>
 <body>
-    <!-- VIDEO SECTION (now first) -->
-    <section class="video-section" id="video">
-        <div class="video-container" id="video-container">
-            <video id="main-video" muted loop autoplay playsinline controls preload="auto" style="max-width: 100%; height: auto;">
-                <source src="ways,snippet.august19.mp4" type="video/mp4">
-                Your phone can't handle this footage!
-            </video>
-            <div id="continue-overlay" style="
-                position: absolute;
-                top: 0; left: 0; width: 100%; height: 100%;
-                display: flex; justify-content: center; align-items: center;
-                background: rgba(0,0,0,0.4); color: #fff; font-size: 2em;
-                opacity: 0; pointer-events: none; transition: opacity 1s;
-                z-index: 2;
-            ">
-                Tap anywhere to continue
-            </div>
-        </div>
-    </section>
-
-    <!-- TRANSITION SECTION (button scrolls to product) -->
-    <section class="transition-section">
-        <button class="remember-btn" onclick="scrollToProduct()">
-            To Remember This
-        </button>
-    </section>
-
-    <!-- PRODUCT SECTION (now after video) -->
+    <!-- PRODUCT SECTION -->
     <section class="product-section" id="product">
         <div class="product-container">
             <div class="product-visual">
@@ -178,10 +151,37 @@
         </div>
     </section>
 
+    <!-- TRANSITION SECTION -->
+    <section class="transition-section">
+        <button class="remember-btn" onclick="scrollToVideo()">
+            To Remember This
+        </button>
+    </section>
+
+    <!-- VIDEO SECTION -->
+    <section class="video-section" id="video">
+        <div class="video-container" id="video-container">
+            <video id="main-video" muted loop autoplay playsinline controls preload="auto" style="max-width: 100%; height: auto;">
+                <source src="wideawakerevived-(1).mp4" type="video/mp4">
+                Your phone can't handle this footage!
+            </video>
+            <div id="continue-overlay" style="
+                position: absolute;
+                top: 0; left: 0; width: 100%; height: 100%;
+                display: flex; justify-content: center; align-items: center;
+                background: rgba(0,0,0,0.4); color: #fff; font-size: 2em;
+                opacity: 0; pointer-events: none; transition: opacity 1s;
+                z-index: 2;
+            ">
+                Tap anywhere to continue
+            </div>
+        </div>
+    </section>
+
     <script>
-        // Smooth scroll to product section when "Remember This" is clicked
-        function scrollToProduct() {
-            document.getElementById('product').scrollIntoView({
+        // Smooth scroll to video section when "Remember This" is clicked
+        function scrollToVideo() {
+            document.getElementById('video').scrollIntoView({
                 behavior: 'smooth'
             });
         }
